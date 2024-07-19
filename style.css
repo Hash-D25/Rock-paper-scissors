@@ -63,19 +63,62 @@
     font-weight:bold;
     box-shadow: 0 10px 20px rgba(225,29,72,0.5),0 6px 6px rgba(225,29,72,0.5),0 0 100px -10px var(--clr-rose);
 }
+.scoreline{
+    grid-area: scoreline;
+}
+.player{
+    display: flex;
+    grid-area: player;
+    gap: 15rem;
+    place-self: end center;
+}
+
+.youbox{
+    display: flex;
+    background-color: white;
+    color: #475569;
+    width: 7rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.computerbox{
+    display: flex;
+    background-color: white;
+    color: #475569;
+    width: 7rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.moves{
+    display: flex;
+    gap: 20rem;
+    grid-area: moves;
+    place-self: start center;
+}
+.result{
+    grid-area: result;
+    font-size: 60px;
+}
 .options{
     display: grid;
     
-    margin:10rem auto;
+    margin:5rem auto;
     padding: 1em;
     width: 70vw;
-    height: 50vh;
+    /* height: 70vh; */
     place-content: center;
     place-items: center ;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(2,1fr) 8rem ;
+    grid-template-rows: 3rem 2rem 9rem  2rem 5rem 2rem 5rem ;
     grid-template-areas:"rock rock paper paper scissors scissors"
     "rocktxt rocktxt papertxt papertxt scissorstxt scissorstxt "
+    "player player player player player player"
+    "moves moves moves moves moves moves"
+    "result result result result result result"
+    "scoreline scoreline scoreline scoreline scoreline scoreline"
     "score score score reset reset reset";
 
 }
@@ -113,6 +156,7 @@ img{
 }
 p{
     color: white;
+    font-weight: bold;
 }
 .heading{
     display: flex;
