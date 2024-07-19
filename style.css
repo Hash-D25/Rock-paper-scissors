@@ -1,0 +1,123 @@
+:root{
+    --clr-dark:#070a13  ;
+    --clr-light:#f1f5f9 ;
+    --clr-slate400: #94a3b8;
+    --clr-slate600:#475569 ;
+    --clr-slate800:#1e293b ;
+    --clr-rose: #e11d48;
+    --clr-indigo: #4f46e5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn{
+    padding: 2 em;
+    box-shadow: 0 10px 20px rgba(225,29,72,0.5),0 6px 6px rgba(225,29,72,0.5),0 0 100px -10px var(--clr-rose);
+}
+.rock{
+    grid-area: rock;
+    color: goldenrod;
+}
+.paper{
+    grid-area: paper;
+}
+.scissors{
+    grid-area: scissors;
+}
+
+.rocktxt{
+    grid-area: rocktxt;
+    padding: 2em;
+}
+.papertxt{
+    grid-area: papertxt;
+    padding: 2em;
+}
+.scissorstxt{
+    grid-area: scissorstxt;
+    padding: 2em;
+}
+.score{
+    grid-area: score;
+    place-self:end center;
+    width: 7rem;
+    height: 3rem;
+    background-color: var(--clr-rose);
+    color: var(--clr-light);
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(225,29,72,0.5),0 6px 6px rgba(225,29,72,0.5),0 0 100px -10px var(--clr-rose);
+}
+.reset{
+    grid-area: reset;
+    width: 7rem;
+    height: 3rem;
+    place-self:end center;
+    border: 1px solid rgb(234, 53, 186);
+    background-color: var(--clr-rose);
+    color: var(--clr-light);
+    border-radius:8px ;
+    font-weight:bold;
+    box-shadow: 0 10px 20px rgba(225,29,72,0.5),0 6px 6px rgba(225,29,72,0.5),0 0 100px -10px var(--clr-rose);
+}
+.options{
+    display: grid;
+    
+    margin:10rem auto;
+    padding: 1em;
+    width: 70vw;
+    height: 50vh;
+    place-content: center;
+    place-items: center ;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,1fr) 8rem ;
+    grid-template-areas:"rock rock paper paper scissors scissors"
+    "rocktxt rocktxt papertxt papertxt scissorstxt scissorstxt "
+    "score score score reset reset reset";
+
+}
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    
+}
+
+btn:hover{
+    
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+.paper{
+    color: goldenrod;
+}
+img{
+    background: transparent;
+    background-color: rgba(253, 250, 250, 0.763);
+    /* background-color:rgb(138, 28, 28); */
+    border-radius: 50%;
+    color:goldenrod;
+    object-fit: contain;
+    width: 50px;
+    height: 50px;
+
+}
+p{
+    color: white;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+    color: var(--clr-light);
+    /* margin-bottom: 3rem; */
+}
