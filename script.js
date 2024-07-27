@@ -17,7 +17,7 @@ if (!scores) {
       Ties: 0
     };
 }
-  function updatescoreline(){
+function updatescoreline(){
     document.querySelector('.scoreline').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Losses}, Ties: ${scores.Ties}`;
 }
 updatescoreline();
