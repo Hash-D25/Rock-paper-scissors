@@ -1,10 +1,10 @@
 let scores=JSON.parse(localStorage.getItem('scores'));
 
 function updatescoreline(){
-    document.querySelector('.scoreline').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Loses}, Ties: ${scores.Ties}`;
+    document.querySelector('.scoreline').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Losses}, Ties: ${scores.Ties}`;
 }
 function moves(){
-    document.querySelector('.moves').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Loses}, Ties: ${scores.Ties}`;
+    document.querySelector('.moves').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Losses}, Ties: ${scores.Ties}`;
 }
 function yourmove(){
     document.querySelector('.youresult').innerHTML=`${playerMove}`;
@@ -15,21 +15,21 @@ function computermove(){
 updatescoreline();
 function score(){
     updatescoreline();
-    alert(`Scores:::wins:${scores.Wins} loses:${scores.Loses} ties:${scores.Ties}`);
+    alert(`Scores:::wins:${scores.Wins} loses:${scores.Losses} ties:${scores.Ties}`);
 }
 if (!score) {
     score = {
-      wins: 0,
-      losses: 0,
-      ties: 0
+      Wins: 0,
+      Losses: 0,
+      Ties: 0
     };
   }
 function reset(){
     scores.Wins=0;
-    scores.Loses=0;
+    scores.Losses=0;
     scores.Ties=0;
     updatescoreline();
-    alert(`Scores reset:::wins:${scores.Wins} loses:${scores.Loses} ties:${scores.Ties}`);
+    alert(`Scores reset:::wins:${scores.Wins} loses:${scores.Losses} ties:${scores.Ties}`);
 }
 function playgame(playerMove){
     let computerMove=pickComputerMove();
@@ -68,7 +68,7 @@ function playgame(playerMove){
         }
     }
     if(result==='You won'){scores.Wins+=1;}
-    else if(result==='You lose'){scores.Loses+=1;}
+    else if(result==='You lose'){scores.Losses+=1;}
     else if(result==='Tie'){scores.Ties+=1;}
     
     localStorage.setItem('scores',JSON.stringify(scores));
