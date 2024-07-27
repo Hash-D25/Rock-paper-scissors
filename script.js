@@ -15,10 +15,10 @@ function computermove(){
 updatescoreline();
 function score(){
     updatescoreline();
-    alert(`Scores:::wins:${scores.Wins} loses:${scores.Losses} ties:${scores.Ties}`);
+    alert(`Scores:::wins:${scores.Wins} losses:${scores.Losses} ties:${scores.Ties}`);
 }
-if (!score) {
-    score = {
+if (!scores) {
+    scores = {
       Wins: 0,
       Losses: 0,
       Ties: 0
@@ -29,7 +29,7 @@ function reset(){
     scores.Losses=0;
     scores.Ties=0;
     updatescoreline();
-    alert(`Scores reset:::wins:${scores.Wins} loses:${scores.Losses} ties:${scores.Ties}`);
+    alert(`Scores reset:::wins:${scores.Wins} losses:${scores.Losses} ties:${scores.Ties}`);
 }
 function playgame(playerMove){
     let computerMove=pickComputerMove();
