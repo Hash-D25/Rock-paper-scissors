@@ -1,8 +1,5 @@
 let scores=JSON.parse(localStorage.getItem('scores'));
 
-function updatescoreline(){
-    document.querySelector('.scoreline').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Losses}, Ties: ${scores.Ties}`;
-}
 function moves(){
     document.querySelector('.moves').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Losses}, Ties: ${scores.Ties}`;
 }
@@ -12,18 +9,22 @@ function yourmove(){
 function computermove(){
     document.querySelector('.computerresult').innerHTML=`${computerMove}`;
 }
-updatescoreline();
-function score(){
-    updatescoreline();
-    alert(`Scores:::wins:${scores.Wins} losses:${scores.Losses} ties:${scores.Ties}`);
-}
+
 if (!scores) {
     scores = {
       Wins: 0,
       Losses: 0,
       Ties: 0
     };
-  }
+}
+  function updatescoreline(){
+    document.querySelector('.scoreline').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Losses}, Ties: ${scores.Ties}`;
+}
+updatescoreline();
+function score(){
+    updatescoreline();
+    alert(`Scores:::wins:${scores.Wins} losses:${scores.Losses} ties:${scores.Ties}`);
+}
 function reset(){
     scores.Wins=0;
     scores.Losses=0;
