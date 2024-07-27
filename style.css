@@ -15,6 +15,7 @@
 .btn{
     padding: 2 em;
     box-shadow: 0 10px 20px rgba(225,29,72,0.5),0 6px 6px rgba(225,29,72,0.5),0 0 100px -10px var(--clr-rose);
+    cursor: pointer;
 }
 .rock{
     grid-area: rock;
