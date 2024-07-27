@@ -1,2 +1,2 @@
 #Click here to view project👉:
-(https://hash-d25.github.io/Rock-paper-scissors/)
+(https://encr.pw/Rock-paper-scissors)
