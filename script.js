@@ -12,19 +12,16 @@ function computermove(){
 
 if (!scores) {
     scores = {
-      Wins: 0,
-      Losses: 0,
-      Ties: 0
+        Wins: 0,
+        Losses: 0,
+        Ties: 0
     };
 }
 function updatescoreline(){
     document.querySelector('.scoreline').innerText=`Wins: ${scores.Wins}, Losses: ${scores.Losses}, Ties: ${scores.Ties}`;
 }
 updatescoreline();
-function score(){
-    updatescoreline();
-    alert(`Scores:::wins:${scores.Wins} losses:${scores.Losses} ties:${scores.Ties}`);
-}
+
 function reset(){
     scores.Wins=0;
     scores.Losses=0;
@@ -95,3 +92,42 @@ function pickComputerMove(){
     
     return computerMove;
 }
+let isautoplaying=false;
+let intervalid;
+const autoplaybtn=document.querySelector('.Autoplay');
+function stopautoplay(){
+    if(autoplaybtn.innerText==='Autoplay'){
+        autoplaybtn.innerText='Stop Autoplay';
+        autoplaybtn.classList.add('Stopautoplay')
+    }
+    else{
+        autoplaybtn.innerText='Autoplay';
+        autoplaybtn.classList.remove('Stopautoplay');
+    }
+}
+function Autoplay(){
+    if(!isautoplaying){
+        intervalid=setInterval(()=>{                     // arrow function same as function(){}
+            const playermove=pickComputerMove();
+            playgame(playermove);
+            isautoplaying=true;
+        },1000);
+    }
+    else{
+        clearInterval(intervalid);
+        isautoplaying=false;
+    }
+}
+// adding keydown addEventListener
+
+    document.body.addEventListener('keydown',(event)=>{
+        if(event.key==='r'){
+            playgame('rock');
+        }
+        else if(event.key==='p'){
+            playgame('paper');
+        }
+        else if(event.key==='s'){
+            playgame('scissors');
+        }
+    });

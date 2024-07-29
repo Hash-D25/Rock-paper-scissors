@@ -40,8 +40,8 @@
     grid-area: scissorstxt;
     padding: 2em;
 }
-.score{
-    grid-area: score;
+.Autoplay{
+    grid-area: Autoplay;
     place-self:end center;
     width: 7rem;
     height: 3rem;
@@ -51,6 +51,11 @@
     border: none;
     font-weight: bold;
     box-shadow: 0 10px 20px rgba(225,29,72,0.5),0 6px 6px rgba(225,29,72,0.5),0 0 100px -10px var(--clr-rose);
+    cursor: pointer;
+}
+.Stopautoplay{
+    background-color: var(--clr-light);
+    color: var(--clr-rose);
 }
 .reset{
     grid-area: reset;
@@ -120,7 +125,7 @@
     "moves moves moves moves moves moves"
     "result result result result result result"
     "scoreline scoreline scoreline scoreline scoreline scoreline"
-    "score score score reset reset reset";
+    "Autoplay Autoplay Autoplay reset reset reset";
 
 }
 body{
